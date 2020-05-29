@@ -12,8 +12,8 @@ import javafx.util.Duration;
 public class Planet {
 	
 	public String name;
-	public Circle planet;
-	public Ellipse planetOrbit;
+	public Circle planet = new Circle();
+	public Ellipse planetOrbit = new Ellipse();
 	public PathTransition transitionPlanet = new PathTransition();
 	
 	// constructor
@@ -24,10 +24,12 @@ public class Planet {
 		planet.setRadius(planetRadius);
 		
 		// orbit path
-		planetOrbit.setCenterX(centerX);
-		planetOrbit.setCenterY(centerY);
+//		planet.setCenterX(centerX);
+//		planet.setCenterY(centerY);
 		planetOrbit.setRadiusX(radiusX);
 		planetOrbit.setRadiusY(radiusY);
+		planetOrbit.setCenterX(centerX);
+		planetOrbit.setCenterY(centerY);
 		
 		// orbit animation
 		transitionPlanet.setPath(planetOrbit);
