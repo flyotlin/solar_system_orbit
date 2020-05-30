@@ -1,14 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox fx:id="pane2D" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.TwoDController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handle" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.TwoDController">
   <children>
-      <Pane prefHeight="834.0" prefWidth="1280.0">
+      <Pane fx:id="pane2D" onKeyPressed="#handle" prefHeight="834.0" prefWidth="1280.0" styleClass="root" stylesheets="@../../views/main.css">
          <children>
-            <Label prefHeight="146.0" prefWidth="177.0" style="-fx-background-color: Black;" text="Sun" textFill="WHITE" />
+            <VBox fx:id="vSun" prefHeight="400.0" prefWidth="489.0" visible="false">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/sun.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="175.0" prefWidth="432.0" text="Sun&#10;Diameter: 91740 km&#10;Mass: 300000 Earth Mass&#10;Average Temperature: 5083°C&#10;Yellow Dwarf, Main-sequence Star" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox fx:id="v0" prefHeight="400.0" prefWidth="489.0" visible="false">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/mercury.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="175.0" prefWidth="432.0" text="Mercury&#10;Diameter: 8464 km&#10;Mass: 0.0773 Earth Mass&#10;Atmosphere Type: Thin&#10;Average Temperature: 167 degrees C&#10;Average Day Length: 3.1 Earth Days" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox fx:id="v1" prefHeight="425.0" prefWidth="489.0" visible="false">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/Venus.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="251.0" prefWidth="432.0" text="Venus&#10;Diameter: 12696 km&#10;Mass: 1.82 Earth Mass&#10;Atmosphere Type: Medium Thin&#10;Average Temperature: -70°C&#10;Seasonal Range:  -150°C to 20°C&#10;Average Day Length:  0.9 Earth Days&#10;Terrestrial planet with metllic core" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Button layoutX="-3.0" layoutY="777.0" mnemonicParsing="false" onAction="#onBackPressed" text="Back" />
+            <VBox fx:id="v2" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="489.0" visible="false">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/bluemarble.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="219.0" prefWidth="506.0" text="Earth&#10;Diameter:  11638 km&#10;Mass: 1 Earth Mass&#10;Atmosphere Type: Thin&#10;Average Temperature: -90°C&#10;Seasonal Range: -90°C to 15°C&#10;Average Day Length: 1 Earth Day&#10;Wandering Dwarf Planet with metallic core" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox fx:id="v3" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="489.0" visible="false">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/mars.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="234.0" prefWidth="432.0" text="Mars &#10;Diameter: 7406 km&#10;Mass: 1.39 Earth Mass&#10;Atmosphere Type: Medium Thick&#10;Average Temperature: 20°C&#10;Seasonal Range: -90°C to 60°C&#10;Average Day Length: 0.8 Earth Day&#10;Terrestrial planet with metallic core" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox fx:id="v4" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="489.0" visible="false">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/jupiterNasa.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="175.0" prefWidth="432.0" text="Jupiter&#10;Diameter: 21160 km&#10;Mass: 14.9 Earth Mass&#10;Atmosphere Type: Thin&#10;Average Temperature: -210°C&#10;Seasonal Range: -225°C to -195°C&#10;Average Day Length: 0.6 Earth Days&#10;Gas Giant with dense gassy core" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox fx:id="v5" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="489.0" visible="false">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/saturn.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="175.0" prefWidth="432.0" text="Saturn&#10;Diameter: 45870 km&#10;Mass: 300000 Earth Mass&#10;Average Temperature: 5083°C&#10;Yellow Dwarf, Main-sequence Star" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox fx:id="v6" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="489.0" visible="false">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/uranus.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="175.0" prefWidth="432.0" text="Uranus&#10;Diameter: 45870 km&#10;Mass: 300000 Earth Mass&#10;Average Temperature: 5083°C&#10;Yellow Dwarf, Main-sequence Star" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox fx:id="v7" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="489.0" visible="false">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/neptune.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="175.0" prefWidth="432.0" text="Neptune&#10;Diameter: 13754 km&#10;Mass: 14.9 Earth Mass&#10;Atmosphere Type: Thin&#10;Average Temperature: -210°C&#10;Seasonal Range: -225°C to -195°C&#10;Average Day Length: 0.6 Earth Days&#10;Gas Giant with dense gassy core" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
          </children>
       </Pane>
   </children>
