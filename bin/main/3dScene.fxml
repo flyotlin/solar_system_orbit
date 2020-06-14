@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handle" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ThreeDController">
+   <children>
+      <ImageView fitHeight="884.0" fitWidth="1475.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/planets/stars.jpg" />
+         </image>
+      </ImageView>
+      <Pagination fx:id="pagination" layoutX="8.0" layoutY="6.0" onKeyPressed="#handle" pageCount="10" prefHeight="785.0" prefWidth="1268.0" />
+      <Slider fx:id="magnificationSlider" layoutX="490.0" layoutY="700.0" prefHeight="14.0" prefWidth="300.0" />
+      <Button fx:id="back" layoutX="8.0" layoutY="768.0" mnemonicParsing="false" onAction="#back" text="Back" />
+   </children>
+</Pane>

@@ -6,6 +6,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/*
+ * @author:
+ */
 public class Main extends Application {
 	public static Stage currentStage;
 	public static Scene menuScene;
@@ -13,12 +16,13 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
-
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		currentStage = primaryStage;
 		Parent root = FXMLLoader.load(getClass().getResource("mainScene.fxml"));
 		menuScene = new Scene(root);
+		
 		
 		
 		currentStage.setTitle("Solar System Orbit Simulation");
@@ -27,5 +31,7 @@ public class Main extends Application {
 		currentStage.show();
 		
 	}
+	
+	
 
 }
