@@ -1,8 +1,11 @@
 package main;
 
+import java.util.List;
+
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.geometry.Point3D;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
@@ -39,6 +42,7 @@ public class SolarPlanet {
 	
 	
 	public SolarPlanet(String name, double xPos, double yPos, double radius, String url) {
+		
 		planetName.setVisible(false);
 		planetName.setText(name);
 		planetName.setTextFill(Color.WHITE);
@@ -60,6 +64,13 @@ public class SolarPlanet {
 		
 		planetSphere.getTransforms().add(new Rotate(90, Rotate.X_AXIS));
 		moonSphere.getTransforms().add(new Rotate(90, Rotate.X_AXIS));
+		
+		if(Main.real == 0 ) {
+			moonSphere.setRadius(4);
+		}
+		else {
+			moonSphere.setRadius(0.27);
+		}
 		startTimer();
 		
 		setMouseHover();
@@ -74,22 +85,23 @@ public class SolarPlanet {
 		return moonSphere;
 	}
 	
+	public void setIsDrawing(boolean tr) {
+		start_drawing = tr;
+	}
+	
 	public void playRevolution(double axe_x, double axe_y, double revolutionPeriod, double translate) {
 		planetSphere.setRotationAxis(new Point3D(0, Math.sqrt(2)*Math.cos(Math.toRadians(90)), Math.sqrt(2)*Math.sin(Math.toRadians(90))));
 		revolution = new Timeline(new KeyFrame(Duration.millis(1), (e)->{
-			double x = WIDTH/2 + axe_x*Math.cos(elapsedTime*(2*(Math.PI/(revolutionPeriod*1000))) + translate);
-			double y = HEIGHT/2 + axe_y*Math.sin(elapsedTime*(2*(Math.PI/(revolutionPeriod*1000))) + translate);
+			double x = WIDTH/2 + axe_x*Math.cos(-(elapsedTime*(2*(Math.PI/(revolutionPeriod*1000))) + translate));
+			double y = HEIGHT/2 + axe_y*Math.sin(-(elapsedTime*(2*(Math.PI/(revolutionPeriod*1000))) + translate));
 			
 			planetSphere.setLayoutX(x);
 			planetSphere.setLayoutY(y);
 			
 			if(start_drawing) {
-//				if(Math.abs(x - start_x) < 1e-6 && Math.abs(y - start_y) < 1e-6 || notMetTwice) {
-//					notMetTwice = false;
-					drawOrbit(prev_x, prev_y, x, y);
-					prev_x = x;
-					prev_y = y;					
-//				}
+				drawOrbit(prev_x, prev_y, x, y);
+				prev_x = x;
+				prev_y = y;					
 			}
 
 		}));
@@ -124,8 +136,8 @@ public class SolarPlanet {
 	public void playMoonRevolution() {
 		moonSphere.setRotationAxis(new Point3D(0, Math.sqrt(2)*Math.cos(Math.toRadians(90)), Math.sqrt(2)*Math.sin(Math.toRadians(90))));
 		moonRevolution = new Timeline(new KeyFrame(Duration.millis(1), (e)->{
-			moonSphere.setLayoutX(planetSphere.getLayoutX() + 40*Math.cos(elapsedTime*(2*(Math.PI/(27*1000))) ));
-			moonSphere.setLayoutY(planetSphere.getLayoutY() + 40*Math.sin(elapsedTime*(2*(Math.PI/(27*1000))) ));
+			moonSphere.setLayoutX(planetSphere.getLayoutX() + 40*Math.cos(-1*(elapsedTime*(2*(Math.PI/(27*1000))) )));
+			moonSphere.setLayoutY(planetSphere.getLayoutY() + 40*Math.sin(-1*(elapsedTime*(2*(Math.PI/(27*1000))) )));
 
 		}));
 		moonRevolution.setCycleCount(Timeline.INDEFINITE);
@@ -194,7 +206,7 @@ public class SolarPlanet {
 				
 				start_drawing = false;
 			}
-			System.out.println(planetName + "clicked");
+//			System.out.println(planetName + "clicked");
 		});
 	}
 	
@@ -202,6 +214,12 @@ public class SolarPlanet {
 		Line line = new Line(old_x, old_y, new_x, new_y);
 		line.setStroke(Color.WHITE);
 		orbitLinePane.getChildren().add(line);
+//		if(elapsedTime > 5000) {
+//			List<Node> newList = orbitLinePane.getChildren().subList(2, orbitLinePane.getChildren().size()-1);
+//			orbitLinePane.getChildren().clear();
+//			orbitLinePane.getChildren().addAll(newList);
+//		}
+
 	}
 
 	

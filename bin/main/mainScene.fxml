@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainController">
@@ -18,21 +21,74 @@
                   <Image url="@../../image/space-universe.jpg" />
                </image>
             </ImageView>
-            <Label layoutX="189.0" layoutY="77.0" prefHeight="186.0" prefWidth="1078.0" text="Solar System Orbit Simulation" textFill="#7e9f70">
+            <Button fx:id="twoD" alignment="TOP_LEFT" layoutX="675.0" layoutY="367.0" mnemonicParsing="false" onAction="#on2dPressed" prefHeight="41.0" prefWidth="187.0" styleClass="button_view" stylesheets="@../../views/main.css" text="2D SIMULATION">
+               <font>
+                  <Font name="Meiryo Bold" size="41.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.5038167938931297" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Label layoutX="189.0" layoutY="77.0" prefHeight="186.0" prefWidth="1078.0" text="Solar System Orbit Simulation">
                <font>
                   <Font name="Meiryo" size="64.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="0.33969468560837607" endY="0.7480916180683456" startX="0.3425573611077463" startY="0.255725147159955">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Label>
-            <Button fx:id="twoD" layoutX="869.0" layoutY="400.0" mnemonicParsing="false" onAction="#on2dPressed" prefHeight="29.0" prefWidth="66.0" text="2D" textFill="#628553">
-               <font>
-                  <Font name="Meiryo Bold" size="12.0" />
-               </font>
-            </Button>
-            <Button fx:id="threeD" layoutX="869.0" layoutY="462.0" mnemonicParsing="false" onAction="#on3dPressed" prefHeight="29.0" prefWidth="66.0" text="3D" />
-            <Button fx:id="exit" layoutX="869.0" layoutY="630.0" mnemonicParsing="false" onAction="#onExitPressed" prefHeight="29.0" prefWidth="66.0" text="Exit" />
-            <Button layoutX="869.0" layoutY="572.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="66.0" text="More" />
+            <Button fx:id="threeD" alignment="TOP_LEFT" layoutX="675.0" layoutY="417.0" mnemonicParsing="false" onAction="#on3dPressed" prefHeight="29.0" prefWidth="166.0" styleClass="button_view" stylesheets="@../../views/main.css" text="3D SIMULATION">
+               <textFill>
+                  <LinearGradient endX="0.5190839549057357" endY="0.5954198259433717" startX="0.6364504107992158" startY="0.43129771720362076">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Button>
+            <Button fx:id="exit" alignment="TOP_LEFT" layoutX="675.0" layoutY="584.0" mnemonicParsing="false" onAction="#onExitPressed" prefHeight="29.0" prefWidth="66.0" styleClass="button_view" stylesheets="@../../views/main.css" text="EXIT">
+               <textFill>
+                  <LinearGradient endX="0.3015267466770784" endY="0.5954198259433717" startX="0.5982824718679182" startY="0.4770992366412214">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Button>
+            <Button alignment="TOP_LEFT" layoutX="675.0" layoutY="526.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="66.0" styleClass="button_view" stylesheets="@../../views/main.css" text="MORE">
+               <textFill>
+                  <LinearGradient endX="0.5916030607150712" endY="0.5954198259433717" startX="0.6364504107992158" startY="0.43129771720362076">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Button>
             <Slider fx:id="slider" layoutX="250.0" layoutY="650.0" />
-            <Button fx:id="wiki" layoutX="869.0" layoutY="514.0" mnemonicParsing="false" onAction="#onWikiPressed" prefHeight="29.0" prefWidth="66.0" text="Wiki" />
+            <Button fx:id="wiki" alignment="TOP_LEFT" layoutX="675.0" layoutY="468.0" mnemonicParsing="false" onAction="#onWikiPressed" prefHeight="29.0" prefWidth="66.0" styleClass="button_view" stylesheets="@../../views/main.css" text="ENCYCLOPEDIA">
+               <textFill>
+                  <LinearGradient endX="0.5190839549057357" endY="0.5954198259433717" startX="0.6364504107992158" startY="0.43129771720362076">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Button>
+            <CheckBox fx:id="switchCheck" layoutX="939.0" layoutY="426.0" mnemonicParsing="false" text="Real/Simulation" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </CheckBox>
          </children>
       </Pane>
   </children>

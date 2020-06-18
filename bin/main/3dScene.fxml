@@ -16,6 +16,6 @@
       </ImageView>
       <Pagination fx:id="pagination" layoutX="8.0" layoutY="6.0" onKeyPressed="#handle" pageCount="10" prefHeight="785.0" prefWidth="1268.0" />
       <Slider fx:id="magnificationSlider" layoutX="490.0" layoutY="700.0" prefHeight="14.0" prefWidth="300.0" />
-      <Button fx:id="back" layoutX="8.0" layoutY="768.0" mnemonicParsing="false" onAction="#back" text="Back" />
+      <Button fx:id="back" alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="738.0" mnemonicParsing="false" onAction="#back" styleClass="button_view" stylesheets="@../../views/main.css" text="Back" textFill="WHITE" />
    </children>
 </Pane>

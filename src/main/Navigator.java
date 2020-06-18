@@ -117,7 +117,7 @@ public class Navigator {
 		planetRadius[9] = 0.273;
 //		planetRadius[pageIndex]
 		ThreeDController.planet.setMaterial(planetMaterialURL[pageIndex]);
-		ThreeDController.planet.setRadius(100);
+		ThreeDController.planet.setRadius(200);
 		ThreeDController.planet.setPosition(WIDTH/2 - 50 + 50, HEIGHT/2 - 50);
 	}
 }

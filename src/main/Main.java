@@ -1,9 +1,15 @@
 package main;
 
+
+import java.nio.file.Paths;
+
+
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
 
 /*
@@ -12,6 +18,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	public static Stage currentStage;
 	public static Scene menuScene;
+	public static int real = 0;
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -30,7 +37,10 @@ public class Main extends Application {
 		currentStage.setResizable(false);	// set the window not resizable
 		currentStage.show();
 		
+		
 	}
+//	AudioPlayer.class.getResource("http://www.wavlist.com/soundfx/029/piano2.wav").toString()
+//	Paths.get("/resources/background_music.mp3").toUri().toString()
 	
 	
 
