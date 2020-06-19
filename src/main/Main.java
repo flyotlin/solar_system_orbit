@@ -39,9 +39,6 @@ public class Main extends Application {
 		
 		
 	}
-//	AudioPlayer.class.getResource("http://www.wavlist.com/soundfx/029/piano2.wav").toString()
-//	Paths.get("/resources/background_music.mp3").toUri().toString()
-	
 	
 
 }

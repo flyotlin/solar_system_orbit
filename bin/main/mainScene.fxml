@@ -21,7 +21,7 @@
                   <Image url="@../../image/space-universe.jpg" />
                </image>
             </ImageView>
-            <Button fx:id="twoD" alignment="TOP_LEFT" layoutX="675.0" layoutY="367.0" mnemonicParsing="false" onAction="#on2dPressed" prefHeight="41.0" prefWidth="187.0" styleClass="button_view" stylesheets="@../../views/main.css" text="2D SIMULATION">
+            <Button fx:id="twoD" alignment="TOP_LEFT" layoutX="675.0" layoutY="373.0" mnemonicParsing="false" onAction="#on2dPressed" prefHeight="41.0" prefWidth="187.0" styleClass="button_view" stylesheets="@../../views/main.css" text="2D SIMULATION">
                <font>
                   <Font name="Meiryo Bold" size="41.0" />
                </font>
@@ -47,7 +47,7 @@
                   </LinearGradient>
                </textFill>
             </Label>
-            <Button fx:id="threeD" alignment="TOP_LEFT" layoutX="675.0" layoutY="417.0" mnemonicParsing="false" onAction="#on3dPressed" prefHeight="29.0" prefWidth="166.0" styleClass="button_view" stylesheets="@../../views/main.css" text="3D SIMULATION">
+            <Button fx:id="threeD" alignment="TOP_LEFT" layoutX="674.0" layoutY="442.0" mnemonicParsing="false" onAction="#on3dPressed" prefHeight="29.0" prefWidth="166.0" styleClass="button_view" stylesheets="@../../views/main.css" text="3D SIMULATION">
                <textFill>
                   <LinearGradient endX="0.5190839549057357" endY="0.5954198259433717" startX="0.6364504107992158" startY="0.43129771720362076">
                      <stops>
@@ -56,7 +56,7 @@
                      </stops>
                   </LinearGradient>
                </textFill></Button>
-            <Button fx:id="exit" alignment="TOP_LEFT" layoutX="675.0" layoutY="584.0" mnemonicParsing="false" onAction="#onExitPressed" prefHeight="29.0" prefWidth="66.0" styleClass="button_view" stylesheets="@../../views/main.css" text="EXIT">
+            <Button fx:id="exit" alignment="TOP_LEFT" layoutX="675.0" layoutY="594.0" mnemonicParsing="false" onAction="#onExitPressed" prefHeight="29.0" prefWidth="66.0" styleClass="button_view" stylesheets="@../../views/main.css" text="EXIT">
                <textFill>
                   <LinearGradient endX="0.3015267466770784" endY="0.5954198259433717" startX="0.5982824718679182" startY="0.4770992366412214">
                      <stops>
@@ -65,17 +65,8 @@
                      </stops>
                   </LinearGradient>
                </textFill></Button>
-            <Button alignment="TOP_LEFT" layoutX="675.0" layoutY="526.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="66.0" styleClass="button_view" stylesheets="@../../views/main.css" text="MORE">
-               <textFill>
-                  <LinearGradient endX="0.5916030607150712" endY="0.5954198259433717" startX="0.6364504107992158" startY="0.43129771720362076">
-                     <stops>
-                        <Stop color="BLACK" />
-                        <Stop color="WHITE" offset="1.0" />
-                     </stops>
-                  </LinearGradient>
-               </textFill></Button>
             <Slider fx:id="slider" layoutX="250.0" layoutY="650.0" />
-            <Button fx:id="wiki" alignment="TOP_LEFT" layoutX="675.0" layoutY="468.0" mnemonicParsing="false" onAction="#onWikiPressed" prefHeight="29.0" prefWidth="66.0" styleClass="button_view" stylesheets="@../../views/main.css" text="ENCYCLOPEDIA">
+            <Button fx:id="wiki" alignment="TOP_LEFT" layoutX="675.0" layoutY="518.0" mnemonicParsing="false" onAction="#onWikiPressed" prefHeight="29.0" prefWidth="66.0" styleClass="button_view" stylesheets="@../../views/main.css" text="ENCYCLOPEDIA">
                <textFill>
                   <LinearGradient endX="0.5190839549057357" endY="0.5954198259433717" startX="0.6364504107992158" startY="0.43129771720362076">
                      <stops>
@@ -84,7 +75,7 @@
                      </stops>
                   </LinearGradient>
                </textFill></Button>
-            <CheckBox fx:id="switchCheck" layoutX="939.0" layoutY="426.0" mnemonicParsing="false" text="Real/Simulation" textFill="WHITE">
+            <CheckBox fx:id="switchCheck" layoutX="959.0" layoutY="453.0" mnemonicParsing="false" text="Real/Simulation" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>

@@ -41,8 +41,6 @@ public class MainController implements Initializable, EventHandler<KeyEvent> {
 	@FXML
 	Button wiki;
 	@FXML
-	Button more;
-	@FXML
 	Button exit;
 	@FXML
 	CheckBox switchCheck;
@@ -116,9 +114,6 @@ public class MainController implements Initializable, EventHandler<KeyEvent> {
 	    		Main.real = 0;
 	    	}
 	    });
-	    
-//	    sphere_earth.rotateProperty().bind(slider.valueProperty());
-//	    sphere_earth.translateZProperty().bind(slider.valueProperty());
 		
 	}
 	
